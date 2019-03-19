@@ -37,5 +37,10 @@ int main() {
            printf("%d ",b[i]);
        }
    }
+   if(l==0)
+
+      {
+         printf("unique");
+   }
    return 0;
 }
