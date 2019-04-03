@@ -1,0 +1,67 @@
+#include<stdio.h>
+int main()
+{
+    char a[1000],b[1000],c[1000],d[1000],i,j,k=0,l=0,m=0,n=0;
+    scanf("%s",a);
+    for(i=0;a[i]!='\0';i++)
+    {
+        b[l]=a[i];
+        l++;
+    }
+    for(i=0;i<l;i++)
+    {
+        for(j=i+1;j<l;j++)
+        {
+            if(a[i]==a[j])
+            {
+                a[i]='$';
+                a[j]='$';
+            }
+        }
+    }
+    for(i=0;i<l;i++)
+    {
+        if(a[i]!='$')
+        {
+            j=i;
+            k++;
+        }
+    }
+    j=0;
+    if(k==1)
+    {
+        for(i=0;i<j;i++)
+        {
+          c[j]=b[i];
+          j++;
+        }
+        for(i=j+1;i<l;i++)
+        {
+            d[m]=b[i];
+            m++;
+        }
+        if(m==n)
+        {
+            for(i=0;i<m;i++)
+            {
+                if(c[i]!=d[i])
+                {
+                 n++;
+                }
+            }
+        }
+        if(n==0)
+        {
+            printf("yes");
+        }
+        else
+        {
+            printf("no");
+        }
+    }
+    else
+    {
+        printf("no");
+    }
+    return 0;
+}
